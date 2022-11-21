@@ -765,6 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 1
+  waitTime: 4
 --- !u!61 &7642113629010600179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -968,6 +969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 3
+  waitTime: 4
 --- !u!61 &7642113629139812414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2208,6 +2210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openingDirection: 2
+  waitTime: 4
 --- !u!61 &7642113629838757197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3838,6 +3841,10 @@ PrefabInstance:
     - target: {fileID: 2998142921007551213, guid: 7671f4d388c6c9a44b3520fc761a075c, type: 3}
       propertyPath: m_Name
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998142921007551213, guid: 7671f4d388c6c9a44b3520fc761a075c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2998142921007551213, guid: 7671f4d388c6c9a44b3520fc761a075c, type: 3}
       propertyPath: m_TagString

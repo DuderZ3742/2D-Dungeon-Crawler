@@ -836,19 +836,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Objectives
-
-
-    Explore the dungeon,
-
-    Collect 7 Orbs,
-
-    Find the
-    Exit,
-
-    Escape to move to the
-
-    Next Level'
+  m_Text: "Objectives\n\nExplore the dungeon,\nCollect 7 Orbs,\nFind the Exit to
+    move \nto the Next Level"
 --- !u!222 &452739661
 CanvasRenderer:
   m_ObjectHideFlags: 0
