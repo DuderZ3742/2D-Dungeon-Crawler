@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomKeySpawner : MonoBehaviour
+public class RandomOrbSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GenerateKey());      //Start timer on first frame
+        StartCoroutine(GenerateOrb());      //Start timer on first frame
     }
 
-    IEnumerator GenerateKey()
+    IEnumerator GenerateOrb()
     {
         yield return new WaitForSeconds(5f);        //Starts deleting the keys after 5 seconds
         
         //Remove Keys
-        GameObject[] floorFull;
-        floorFull = GameObject.FindGameObjectsWithTag("Key");
-        for(int i = 0; i < floorFull.Length; i++)
+        GameObject[] orbsList;
+        orbsList = GameObject.FindGameObjectsWithTag("Key");
+        for(int i = 0; i < orbsList.Length; i++)
         {
             bool coinFlip = (Random.Range(0, 2) == 0);
             if(coinFlip == true)
             {
-                Destroy(floorFull[i]);
+                Destroy(orbsList[i]);
             }
         }
         yield return new WaitForSeconds(5f);
