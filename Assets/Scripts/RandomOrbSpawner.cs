@@ -7,7 +7,7 @@ public class RandomOrbSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GenerateOrb());      //Start timer on first frame
+        //StartCoroutine(GenerateOrb());      //Start timer on first frame
     }
 
     IEnumerator GenerateOrb()
@@ -25,7 +25,6 @@ public class RandomOrbSpawner : MonoBehaviour
                 Destroy(orbsList[i]);
             }
         }
-        yield return new WaitForSeconds(5f);
     }
     // Update is called once per frame
     void Update()

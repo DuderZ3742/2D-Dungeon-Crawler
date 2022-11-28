@@ -27,6 +27,8 @@ public class RoomTemplates : MonoBehaviour
                 {
                     Instantiate(end, rooms[i].transform.position, Quaternion.identity);        //After the last room has spawned, the exit will spawn
                     spawnedExit = true;
+                    
+                    Invoke("SpawnCollectables", 3.0f);
                 }
             }
             }
@@ -34,5 +36,19 @@ public class RoomTemplates : MonoBehaviour
             else{
                 waitTime -= Time.deltaTime;
             }
+        }
+        void SpawnCollectables()
+        {
+            //Remove Keys
+        GameObject[] orbsList;
+        orbsList = GameObject.FindGameObjectsWithTag("Key");
+        for(int i = 0; i < orbsList.Length; i++)
+        {
+            bool coinFlip = (Random.Range(0, 2) == 0);
+            if(coinFlip == true)
+            {
+                Destroy(orbsList[i]);
+            }
+        }
         }
     }
