@@ -28,7 +28,7 @@ public class RoomTemplates : MonoBehaviour
                     Instantiate(end, rooms[i].transform.position, Quaternion.identity);        //After the last room has spawned, the exit will spawn
                     spawnedExit = true;
                     
-                    Invoke("SpawnCollectables", 3.0f);
+                    Invoke("SpawnCollectables", 3.0f);          //Activates the SpawnCollectables function after 3 seconds
                 }
             }
             }
@@ -41,11 +41,11 @@ public class RoomTemplates : MonoBehaviour
         {
             //Remove Keys
         GameObject[] orbsList;
-        orbsList = GameObject.FindGameObjectsWithTag("Key");
+        orbsList = GameObject.FindGameObjectsWithTag("Key");            //Adds any object with the tag "Key" to the orbsList Array
         for(int i = 0; i < orbsList.Length; i++)
         {
-            bool coinFlip = (Random.Range(0, 2) == 0);
-            if(coinFlip == true)
+            bool coinFlip = (Random.Range(0, 2) == 0);              //Coin flip, if true the game object gets deleted...
+            if(coinFlip == true)                                    //This happends for all game objects within the orbsList Array
             {
                 Destroy(orbsList[i]);
             }

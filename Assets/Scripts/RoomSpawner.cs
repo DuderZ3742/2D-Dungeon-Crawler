@@ -17,7 +17,7 @@ public class RoomSpawner : MonoBehaviour
     {
         Destroy(gameObject, waitTime);
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn", 0.08f);     //The speed at which the rooms will spawn
+        Invoke("Spawn", 0.09f);     //The speed at which the rooms will spawn
     }
 
     // Update is called once per frame
@@ -61,6 +61,7 @@ public class RoomSpawner : MonoBehaviour
         {
             if(other.GetComponent<RoomSpawner>().spawned == false && spawned == false)      //If theres an open door with no closed room...
             {
+                templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
                 Instantiate(templates.closedRoom, transform.position, Quaternion.identity);     //It will spawn a block so the player cannot escape the dungeon.
                 Destroy(other.gameObject);
             }
