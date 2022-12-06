@@ -10,15 +10,15 @@ public class AddRoom : MonoBehaviour
 
     void Start()
     {
-        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();            //Adds any room with the tag "Rooms" to templates game object
         templates.rooms.Add(this.gameObject);
 
-        Invoke("OpenDoors", 7.0f);
+        Invoke("OpenDoors", 7.0f);          //Starts a 7 seconds countdown on the first frame
     }
 
     void OpenDoors()
     {
-        Destroy(startDoors.gameObject);
+        Destroy(startDoors.gameObject);         //Destroys the Doors game object, which also includes the black background as a child
         Debug.Log("Doors Are Open!");
     }
 }

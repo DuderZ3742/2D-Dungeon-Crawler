@@ -17,16 +17,16 @@ public class UserInterface : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E))         //When the player presses the E key...
         {
-            if(miniMapCam.activeInHierarchy == true && miniMap.activeInHierarchy == true)
+            if(miniMapCam.activeInHierarchy == true && miniMap.activeInHierarchy == true)           //If the minimap is active...
             {
-                miniMap.SetActive(false);
+                miniMap.SetActive(false);           //it will be deactivated
                 miniMapCam.SetActive(false);
             }
             else
             {
-                miniMap.SetActive(true);
+                miniMap.SetActive(true);            //It will be activated
                 miniMapCam.SetActive(true);
             }
         }

@@ -67,8 +67,8 @@ public class TopDownMovement : MonoBehaviour
             else{
                 Debug.Log("Cannot Exit, You Do Not Have 7 Orbs!");                  //If the player hasn't collected 7 collectables when they walked through the object tagged End, Nothing will happen
 
-                endLevelText.SetActive(true);
-                Invoke("EndLevelMessage", 2.0f);
+                endLevelText.SetActive(true);           //If the player hasnt collected 7 orbs, it will display text on the screen...
+                Invoke("EndLevelMessage", 2.0f);        //a 2 second countdown will then activate the EndLevelMessage function...
             }
         }
     
@@ -76,6 +76,6 @@ public class TopDownMovement : MonoBehaviour
 
     void EndLevelMessage()
     {
-        endLevelText.SetActive(false);
+        endLevelText.SetActive(false);          //which then deactivates the text
     }
 }
