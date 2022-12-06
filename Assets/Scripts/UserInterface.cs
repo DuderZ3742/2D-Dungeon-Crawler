@@ -17,7 +17,31 @@ public class UserInterface : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            if(miniMapCam.activeInHierarchy == true && miniMap.activeInHierarchy == true)
+            {
+                miniMap.SetActive(false);
+                miniMapCam.SetActive(false);
+            }
+            else
+            {
+                miniMap.SetActive(true);
+                miniMapCam.SetActive(true);
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*if(Input.GetKeyDown(KeyCode.C))
         {
             miniMap.SetActive(true);
             miniMapCam.SetActive(true);
@@ -27,5 +51,6 @@ public class UserInterface : MonoBehaviour
             miniMap.SetActive(false);
             miniMapCam.SetActive(false);
         }
+        */
     }
 }

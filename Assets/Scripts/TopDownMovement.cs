@@ -39,6 +39,15 @@ public class TopDownMovement : MonoBehaviour
         moveInput.Normalize();
 
         rb2d.velocity = moveInput * moveSpeed;
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            moveSpeed = moveSpeed + 0.3f;
+        }
+        else if(Input.GetKeyUp(KeyCode.Space))
+        {
+            moveSpeed = moveSpeed - 0.3f;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
