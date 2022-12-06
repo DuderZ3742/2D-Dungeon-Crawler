@@ -14,6 +14,8 @@ public class TopDownMovement : MonoBehaviour
 
     public int collectables;
 
+    public GameObject endLevelText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,9 +56,17 @@ public class TopDownMovement : MonoBehaviour
                 SceneManager.LoadScene("MainGame");     //Another random level will load
             }
             else{
-                Debug.Log("Cannot Exit, You Do Not Have 7 Orbs!");      //If the player hasn't collected 7 collectables when they walked through the object tagged End, Nothing will happen
+                Debug.Log("Cannot Exit, You Do Not Have 7 Orbs!");                  //If the player hasn't collected 7 collectables when they walked through the object tagged End, Nothing will happen
+
+                endLevelText.SetActive(true);
+                Invoke("EndLevelMessage", 2.0f);
             }
         }
     
+    }
+
+    void EndLevelMessage()
+    {
+        endLevelText.SetActive(false);
     }
 }

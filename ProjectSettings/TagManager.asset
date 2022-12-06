@@ -10,6 +10,7 @@ TagManager:
   - End
   - Orb
   - Key
+  - StartDoor
   layers:
   - Default
   - TransparentFX
