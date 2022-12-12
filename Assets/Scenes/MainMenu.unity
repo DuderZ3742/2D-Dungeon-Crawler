@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125.5, y: -0.4775}
-  m_SizeDelta: {x: 136.8419, y: 220.0889}
+  m_AnchoredPosition: {x: -113.45124, y: -0.4775}
+  m_SizeDelta: {x: 160.9394, y: 220.0889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51393240
 MonoBehaviour:
@@ -205,15 +205,20 @@ MonoBehaviour:
 
     D - Move Right
 
+    SPACE - Sprint
 
-    Press the "Reload
+    E - Toggle Mini-Map
+
+
+    Press
+    the "Reload
 
     Scene" button at the
 
-    top-left
-    of your screen
+    top-left of your screen
 
-    to load new level'
+    to load
+    new level'
 --- !u!222 &51393241
 CanvasRenderer:
   m_ObjectHideFlags: 0
